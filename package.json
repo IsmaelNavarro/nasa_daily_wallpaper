@@ -1,0 +1,15 @@
+{
+  "name": "nasa_daily_wallpaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ismael Navarro (ismanapa@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "sanitize-filename": "^1.6.1"
+  }
+}
