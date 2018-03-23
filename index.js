@@ -16,12 +16,11 @@ axios.get(`${config.API_ENDPOINT}${config.API_KEY}`)
             responseType: 'stream'
         })
             .then(response => {
-                let stream = fs.createWriteStream(file);
                 response
                     .data
-                    .pipe(stream);
+                    .pipe(fs.createWriteStream(file));
 
-                stream.on('finish', function () {
+                response.data.on('end', function () {
                     wallpaper.set(file).then(() => {
                         console.log('wallpaper changed!');
                     });
